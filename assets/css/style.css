@@ -1896,7 +1896,10 @@ padding-top: 20px;
         margin-top: -40px;
     }
     .midst_conflict_sec{
-        height: 60vh;
+        height: 50vh;
+    }
+    .youth_empowerment_sec{
+        height: 75vh;
     }
     .accordion-button::after{
         margin-right: -20px;
