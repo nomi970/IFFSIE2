@@ -1937,8 +1937,9 @@ padding-top: 20px;
         font-size: 12px;
     }
     .midst_conflict_main h2 {
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 165px;
     }
     .empower_transform_content h2 {
         font-size: 32px;
