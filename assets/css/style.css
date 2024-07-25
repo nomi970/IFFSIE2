@@ -1475,11 +1475,12 @@ padding-top: 20px;
       }
       .header_video_poster{
         position: absolute;
-        top: 15px;
-        right: -120px;
+        top: 29px;
+        right: 152px;
       }
       .video__poster_width{
         width: 200px;
+        height: 90px;
       }
       .paginacontainer.active-progress {
         opacity: 1;
