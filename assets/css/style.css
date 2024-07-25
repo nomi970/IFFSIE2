@@ -2035,6 +2035,10 @@ padding-top: 20px;
     .empower_transform_circle {
         padding-left: 30px;
     }
+        .header_video_poster {
+            top: 20px;
+            left: 68px;
+        }
 }
 @media screen and (max-width: 350px){
     .empower_transform_circle {
