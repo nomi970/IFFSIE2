@@ -519,16 +519,13 @@
       </div>
       <div>
         <div class="header_video_poster">
-            <a target="_blank" href="https://www.youtube.com/watch?v=tn2LanKJcOs"><video width="200px" src="https://ahmad-web-developer.b-cdn.net/video_poster.mp4" muted autoplay loop playsinline></video>
+            <a target="_blank" href="https://www.youtube.com/watch?v=tn2LanKJcOs"><video class="video__poster_width" width="200px" src="https://ahmad-web-developer.b-cdn.net/video_poster.mp4" muted autoplay loop playsinline></video>
             <div class="sound__btn" onclick="toggleSound()">
                 <i class="fa-solid fa-play "></i>
             </div></a>
         </div>
       </div>
       </div>
-      
-      <!-- <a target="_blank" href="https://www.youtube.com/watch?v=tn2LanKJcOs"><video width="200px" src="./assets/images/video_poster.mp4" muted autoplay loop playsinline></video></a> -->
-      <!-- <video width="200px" src="https://ahmad-web-developer.b-cdn.net/video_poster.mp4" muted autoplay loop playsinline></video> -->
       <form id="donationForm" class="donation-form">
         <header>
             <h2>Choose amount</h2>
@@ -1824,6 +1821,38 @@ document.querySelector('.progress-wrap').addEventListener('click', () => {
     top: 0,
     behavior: 'smooth' // Smooth scroll to the top
   });
+});
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const navItems = document.querySelector('.main-nav .nav-items');
+  const progressBar = document.querySelector('.top-progress-bar');
+
+  // Function to update background color based on 'show' class presence
+  function updateBackgroundColor() {
+      if (navItems.classList.contains('show')) {
+          progressBar.style.backgroundColor = 'transparent';
+      } else {
+          progressBar.style.backgroundColor = ''; // Reset to default or another color
+      }
+  }
+
+  // Initial check
+  updateBackgroundColor();
+
+  // Create a MutationObserver to monitor changes in attributes of .main-nav .nav-items
+  const observer = new MutationObserver(function(mutationsList) {
+      for (let mutation of mutationsList) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+              updateBackgroundColor();
+              break;
+          }
+      }
+  });
+
+  // Start observing changes in attributes (specifically class changes) of navItems
+  observer.observe(navItems, { attributes: true });
 });
 
     </script>
