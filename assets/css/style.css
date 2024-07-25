@@ -1327,7 +1327,16 @@ padding-top: 20px;
     position: relative;
     z-index: 2;
 }
-
+.nt_acc{
+    height: 37px;
+    align-items: center;
+    display: flex;
+    padding-left: 12px !important;
+    color: black;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 400;
+}
 
 
 
@@ -1594,6 +1603,15 @@ padding-top: 20px;
         font-size: 20px;
         color: #FF8206;
     }
+    .w_100__992 .accordion-item .accordion-button.collapsed {
+        height: 35px;
+    }
+    .w_100__992 .accordion-button{
+        font-size: 16px;
+    }
+    .accordion-button::after{
+        background-size: .8rem;
+    }
     .custom-accordion-title{
         font-size: 16px;
         line-height: 20px;
@@ -1607,7 +1625,8 @@ padding-top: 20px;
         gap: 20px;
     }
     .accordion-button:not(.collapsed)::after{
-        margin-right: -20px;
+        margin-right: -14px;
+        margin-top: -15px;
     }
     .accordion-button::after{
         margin-right: -20px;
