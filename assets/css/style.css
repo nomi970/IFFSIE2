@@ -1987,15 +1987,19 @@ padding-top: 20px;
     .video__poster_width{
         width: 150px;
       }
-      .moing-main img{
-        width: 50%;
-      }
       .header_video_poster {
-        top: 0px;
-        right: 15px;
+        top: 25px;
+        left: 90px;
     }
 }
 @media screen and (max-width: 470px){
+    .header_video_poster {
+        top: 23px;
+        left: 68px;
+    }
+    .video__poster_width{
+        height: 75px;
+    }
     .empower_transform_circle {
         padding-left: 60px;
     }
@@ -2036,9 +2040,6 @@ padding-top: 20px;
     .empower_transform_circle {
         padding-left: 0px;
     }
-    .moing-main img{
-        width: 50%;
-      }
       .header_video_poster {
         top: 0px;
         right: 15px;
