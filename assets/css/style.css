@@ -1463,7 +1463,7 @@ padding-top: 20px;
         align-items: center;
         position: absolute;
         bottom: 14px;
-        left: 15px;
+        left: 27px;
         cursor: pointer;
       }
       .sound__btn i{
@@ -1895,6 +1895,9 @@ padding-top: 20px;
     .empower_transform_circle {
         padding-left: 75px;
         margin-top: -40px;
+    }
+    .sound__btn{
+        left: 16px;
     }
     .midst_conflict_sec{
         height: 50vh;
