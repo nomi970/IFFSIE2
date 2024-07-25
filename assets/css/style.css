@@ -62,7 +62,7 @@ h1,h2,h3,h4,h5,p{
 }
 
 .main-nav.bgchange{
-    background: rgb(198, 210, 212);
+    background: white;
     transition: all .3s linear;
 }
 
@@ -290,12 +290,12 @@ padding-top: 20px;
     color: #464647;
 }
 .circle2 {
-    border: 5px solid #F33131;
+    border: 5px solid gray;
     top: 38px;
     left: 206px;
 }
 .circle2:hover{
-    background-color: #F33131;
+    background-color: gray;
 }
 .circle3 {
     border: 5px solid #0F36FF;
@@ -982,7 +982,7 @@ padding-top: 20px;
     color: #191919;
 }
 .nav-items .nav-link:hover{
-    border-bottom: 10px solid #FF8206;
+    border-bottom: 4px solid #FF8206;
     line-height: 83px;
     height: 83px;
     transition: linear all .3s;
