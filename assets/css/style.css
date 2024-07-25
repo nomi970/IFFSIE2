@@ -1327,7 +1327,7 @@ padding-top: 20px;
     position: relative;
     z-index: 2;
 }
-.nt_acc{
+/* .nt_acc{
     height: 37px;
     align-items: center;
     display: flex;
@@ -1336,7 +1336,7 @@ padding-top: 20px;
     font-family: "Proxima Nova";
     font-size: 14px;
     font-weight: 400;
-}
+} */
 
 
 
@@ -1497,11 +1497,7 @@ padding-top: 20px;
         transform: translateY(0);
         z-index: 2;
     }
-    .nt_acc{
-        padding-left: 12px !important;
-        font-size: 14px !important;
-        font-weight: 400 !important;
-    }
+
 
 
 
@@ -1607,6 +1603,11 @@ padding-top: 20px;
         display: block;
         font-size: 20px;
         color: #FF8206;
+    }
+    .nt_acc{
+        padding-left: 12px !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
     }
     .w_100__992 .accordion-item .accordion-button.collapsed {
         height: 35px;
