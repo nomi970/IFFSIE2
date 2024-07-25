@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Iftiin Foundation for Social Innovation & Entrepreneurship (IFFSIE)</title>
+    <meta name="description" content="The Iftiin Foundation for Social Innovation & Entrepreneurship (IFFSIE) empowers young people in violence-affected communities to become leaders in building peaceful, prosperous societies. We focus on Economic Freedom, Mental Health, and Systems Change.">
+ <!-- Twitter Card data -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:site" content="@your_twitter_handle"> <!-- Replace with your Twitter handle -->
+ <meta name="twitter:title" content="The Iftiin Foundation for Social Innovation & Entrepreneurship (IFFSIE)">
+ <meta name="twitter:description" content="Empowering young people in violence-affected communities to become leaders in building peaceful, prosperous societies. Focus areas: Economic Freedom, Mental Health, and Systems Change.">
+ <meta name="twitter:image" content="URL_to_your_image.jpg"> <!-- Replace with the URL to a relevant image -->
+  <!---------------------- Bootstrap Cdn---------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!----------------------- CSS ------------------------------->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <title>Home page | IFFSIE</title>
+  <style>
+    .frm__padd{
+        padding: 18px 24px 24px 24px;
+    }
+        .donation-form {
+            max-width: 310px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+        }
+        .donation-form header {
+            background-color: #FF8500;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .donation-form h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .donation-form .tab {
+            display: flex;
+            justify-content: center;
+            margin: 15px auto;
+        }
+        .donation-form .tab button {
+            width: 75px;
+            height: 37px;
+            border: none;
+            /* padding: 10px 20px; */
+            cursor: pointer;
+            border-radius: 4px;
+            font-family: Proxima Nova;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+            /* text-align: left; */
+            color: #333333;
+        }
+        .donation-form .tab button.active {
+            background-color: #FF8206;
+            color: #FFFFFF;
+            border: none;
+            box-shadow: 0px 2px 24px 0px #0000003D;
+        }
+        .donation-form .amount-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .donation-form .amount-buttons label {
+            background-color: transparent;
+            border: 1px solid #00000033;
+            border-radius: 5px;
+            /* padding: 10px 20px; */
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            /* margin: 5px; */
+            cursor: pointer;
+            width: 92px;
+            height: 44px;
+            flex: 1 1 calc(33.33% - 10px);
+            max-width: calc(33.33% - 10px);
+            text-align: center;
+            font-family: Proxima Nova;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 21.92px;
+            text-align: left;
+            color: #464647;
+        }
+        .donation-form .amount-buttons input {
+            display: none;
+        }
+        .donation-form .amount-buttons input:checked + label {
+            background-color: #FF8500;
+            color: #fff;
+        }
+        .donation-form .custom-amount {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+            flex-direction: column;
+        }
+        .donation-form .custom-amount input {
+            width: calc(100% - 0px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: "Proxima Nova";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21.92px;
+            text-align: left;
+
+        }
+        .donation-form .options {
+            margin: 15px 0;
+        }
+        .donation-form .options label {
+            display: block;
+            margin-bottom: 10px;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            display: flex;
+            align-items: baseline;
+            gap: 5px;
+        }
+        .donation-form .next-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .donation-form .next-button button {
+            background-color: #FF8500;
+            color: #fff;
+            border: none;
+            height: 45px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-family: Proxima Nova;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 24px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #FF8206;
+            gap: 8px;
+        }
+        .error {
+            color: red;
+            position: absolute;
+            bottom: -16px;
+            font-size: 12px;
+        }
+        .donation-form .tab{
+            border: 0.5px solid #C7C7C7;
+            width: fit-content;
+            border-radius: 8px;
+            padding: 4px;
+            background-color: #FAFAFA;
+        }
+        .donation-form header h2{
+            font-family: Proxima Nova;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 21.92px;
+            text-align: left;
+            color: #FFFEFF;
+            padding: 14px 32px;
+        }
+        .donation-form .form__para{
+            font-family: Inter;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 16.94px;
+            text-align: center;
+            color: #000000;
+        }
+        
+  </style>
+</head>
+<body>
+
+
+<!-------------------------- ********** Section 1 ********** ------------------------->
+
+
+<div class="about_hover">
+    <div class="container">
+        <div class="about_hover_main">
+            <div class="about_hover_title_desc">
+                <h2>About us</h2>
+                <p>IFFSIE is building a world where youth are no longer onlookers; they are   productive members of society and the architects of a peaceful and prosperous   world</p>
+                <img class="about_hover_bottom_image" src="./assets/images/about_hover_bottom.png" alt="about_hover_bottom">
+            </div>
+            <div class="about_hover_links">
+                <h2>Who we are</h2>
+                <div class="about_hover_sun_links">
+                    <a href="#">Team</a>
+                    <a href="#">Board</a>
+                    <a href="#">Our impact</a>
+                    <a href="#">Supporters</a>
+                    <a href="#">Partnerships</a>
+                    <a href="#">Youth Council</a>
+                </div>
+                <img class="about_hover_links_bottom-img" src="./assets/images/about_hover_links_bottom-img.png" alt="about_hover_links_bottom-img">
+            </div>
+            <div class="about_hover_links">
+                <h2>Join the movement</h2>
+                <div class="about_hover_sun_links">
+                    <a href="#">Donate</a>
+                    <a href="#">Partner with us</a>
+                    <a href="#">Shop</a>
+                </div>
+                <img class="about_hover_sun_bottom" src="./assets/images/about_hover_sun_bottom_img.png" alt="about_hover_sun_bottom_img">
+            </div>
+            <div class="about_hover_image">
+                <div>
+                    <img src="./assets/images/about_hover-image.jpg" alt="about_hover">
+                    <a href="#">Read about our journey and our nine years of impact</a>
+                </div>
+                
+                <img class="about_hover-image_link" src="./assets/images/about_hover-image_link.png" alt="about_hover-image_link">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about_hover program__hover">
+    <div class="container">
+        <div class="about_hover_main">
+            <div class="about_hover_title_desc">
+                <h2>Our programs</h2>
+                <p>IFFSIE empowers youth through economic opportunities, mental health support, and pioneering systems change, breaking cycles of stagnation and unlocking their potential</p>
+                <img class="about_hover_bottom_image" src="./assets/images/about_hover_bottom.png" alt="about_hover_bottom">
+            </div>
+            <div class="about_hover_links">
+                <h2>Mental Health and Wellbeing</h2>
+                <div class="about_hover_sun_links">
+                    <a href="#">Workforce Development</a>
+                    <a href="#">Direct Services</a>
+                    <a href="#">Education</a>
+                    <a href="#">Research & Development</a>
+                    <a href="#">Training Portal</a>
+                </div>
+                <img class="about_hover_links_bottom-img" src="./assets/images/about_hover_links_bottom-img.png" alt="about_hover_links_bottom-img">
+            </div>
+            <div class="about_hover_links">
+                <h2>Economic Freedom</h2>
+                <div class="about_hover_sun_links">
+                    <a href="#">Skills Building</a>
+                    <a href="#">Workforce Development</a>
+                    <a href="#">Entrepreneurship</a>
+                    <a href="#">Financial Inclusion</a>
+                </div>
+                <img class="about_hover_sun_bottom" src="./assets/images/about_hover_sun_bottom_img2.png" alt="about_hover_sun_bottom_img">
+            </div>
+            <div class="about_hover_image" style="display: unset;">
+                <div>
+                    <img src="./assets/images/about_hover-image2.jpg" alt="about_hover">
+                    <a href="#">Read our annual report</a>
+                </div>
+                
+                <img class="about_hover-image_link2" class="about_hover-image_link" src="./assets/images/about_hover-image_link2.png" alt="about_hover-image_link">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about_hover news__hover">
+    <div class="container">
+        <div class="about_hover_main">
+            <div class="about_hover_title_desc">
+                <h2>Stay up to date</h2>
+                <p>Stay updated with the latest from IFFSIE – discover our work, the challenges we tackle, and our groundbreaking research on empowering at-risk youth. </p>
+                <img class="about_hover_bottom_image" src="./assets/images/about_hover_bottom.png" alt="about_hover_bottom">
+            </div>
+            <div class="about_hover_links">
+                <h2>Updates </h2>
+                <div class="about_hover_sun_links">
+                    <a href="#">Blog</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">Case Studies</a>
+                </div>
+                <img class="about_hover_links_bottom-img" src="./assets/images/about_hover_links_bottom-img.png" alt="about_hover_links_bottom-img">
+            </div>
+            <div class="about_hover_links">
+                <h2>Resources</h2>
+                <div class="about_hover_sun_links">
+                    <a href="#">Reports</a>
+                    <a href="#">Library</a>
+                </div>
+                <img class="about_hover_sun_bottom" src="./assets/images/about_hover_sun_bottom_img3.png" alt="about_hover_sun_bottom_img">
+            </div>
+            <div class="about_hover_image" style="display: unset;">
+                <div>
+                    <img src="./assets/images/about_hover-image3.jpg" alt="about_hover">
+                    <a href="#">Read our ground breaking report on mental health and   livelihoods in Somalia</a>
+                </div>
+                
+                <img style="z-index: -1;" class="about_hover-image_link2" class="about_hover-image_link" src="./assets/images/about_hover-image_link3.png" alt="about_hover-image_link">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="main-nav">
+  <div class="container">
+    <navbar class="navbar">
+      <div class="logo">
+        <img src="assets/images/icons/iffsie-logo.svg" alt="logo image">
+      </div>
+      <div class="nav-items">
+        <div class="w_100__992">
+            <div class="accordion show__about_922" id="accordionExample">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingAbout">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbout" aria-expanded="false" aria-controls="collapseAbout">
+                            About
+                        </button>
+                    </h2>
+                    <div id="collapseAbout" class="accordion-collapse collapse" aria-labelledby="headingAbout" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <!-- <div class="about_hover"> -->
+                                <div class="container">
+                                    <div class="about_hover_main">
+                                        <div class="about_hover_title_desc">
+                                            <!-- <h2>About us</h2> -->
+                                            <p>IFFSIE is building a world where youth are no longer onlookers; they are   productive members of society and the architects of a peaceful and prosperous   world</p>
+                                            <img class="about_hover_bottom_image" src="./assets/images/about_hover_bottom.png" alt="about_hover_bottom">
+                                        </div>
+                                        <div class="about_hover_links">
+                                            <h2>Who we are</h2>
+                                            <div class="about_hover_sun_links">
+                                                <a href="#">Team</a>
+                                                <a href="#">Board</a>
+                                                <a href="#">Our impact</a>
+                                                <a href="#">Supporters</a>
+                                                <a href="#">Partnerships</a>
+                                                <a href="#">Youth Council</a>
+                                            </div>
+                                            <img class="about_hover_links_bottom-img" src="./assets/images/about_hover_links_bottom-img.png" alt="about_hover_links_bottom-img">
+                                        </div>
+                                        <div class="about_hover_links">
+                                            <h2>Join the movement</h2>
+                                            <div class="about_hover_sun_links">
+                                                <a href="#">Donate</a>
+                                                <a href="#">Partner with us</a>
+                                                <a href="#">Shop</a>
+                                            </div>
+                                            <img class="about_hover_sun_bottom" src="./assets/images/about_hover_sun_bottom_img.png" alt="about_hover_sun_bottom_img">
+                                        </div>
+                                        <div class="about_hover_image">
+                                            <div>
+                                                <img src="./assets/images/about_hover-image.jpg" alt="about_hover">
+                                                <a href="#">Read about our journey and our nine years of impact</a>
+                                            </div>
+                                            
+                                            <img class="about_hover-image_link" src="./assets/images/about_hover-image_link.png" alt="about_hover-image_link">
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="nav-link d__none_992" id="about__hover">About</a>
+        </div>
+        <div class="w_100__992">
+            <div class="accordion show__about_922" id="accordionExample">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingAbout2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbout2" aria-expanded="false" aria-controls="collapseAbout">
+                            Our programs
+                        </button>
+                    </h2>
+                    <div id="collapseAbout2" class="accordion-collapse collapse" aria-labelledby="headingAbout" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <!-- <div class="about_hover"> -->
+                                <div class="container">
+                                    <div class="about_hover_main">
+                                        <div class="about_hover_title_desc">
+                                            <!-- <h2>About us</h2> -->
+                                            <p>IFFSIE empowers youth through economic opportunities, mental health support, and pioneering systems change, breaking cycles of stagnation and unlocking their potential</p>
+                                            <img class="about_hover_bottom_image" src="./assets/images/about_hover_bottom.png" alt="about_hover_bottom">
+                                        </div>
+                                        <div class="about_hover_links">
+                                            <h2>Mental Health and Wellbeing</h2>
+                                            <div class="about_hover_sun_links">
+                                                <a href="#">Workforce Development</a>
+                                                <a href="#">Direct Services</a>
+                                                <a href="#">Education</a>
+                                                <a href="#">Research & Development</a>
+                                                <a href="#">Training Portal</a>
+                                            </div>
+                                            <img class="about_hover_links_bottom-img" src="./assets/images/about_hover_links_bottom-img.png" alt="about_hover_links_bottom-img">
+                                        </div>
+                                        <div class="about_hover_links">
+                                            <h2>Economic Freedom</h2>
+                                            <div class="about_hover_sun_links">
+                                                <a href="#">Skills Building</a>
+                                                <a href="#">Workforce Development</a>
+                                                <a href="#">Entrepreneurship</a>
+                                                <a href="#">Financial Inclusion</a>
+                                            </div>
+                                            <img class="about_hover_sun_bottom" src="./assets/images/about_hover_sun_bottom_img.png" alt="about_hover_sun_bottom_img">
+                                        </div>
+                                        <div class="about_hover_image">
+                                            <div>
+                                                <img src="./assets/images/about_hover-image2.jpg" alt="about_hover">
+                                                <a href="#">Read our annual report</a>
+                                            </div>
+                                            
+                                            <img class="about_hover-image_link" src="./assets/images/about_hover-image_link.png" alt="about_hover-image_link">
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <a href="#" class="nav-link d__none_992" id="about__hover">About</a> -->
+            <a href="#" class="nav-link d__none_992" id="about__hover">Why Waithood</a>
+        </div>
+        <!-- <a href="#" class="nav-link">Why Waithood</a> -->
+        <a href="#" class="nav-link" id="program__hover">Programs</a>
+
+        <div class="w_100__992">
+            <div class="accordion show__about_922" id="accordionExample">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingAbout3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbout3" aria-expanded="false" aria-controls="collapseAbout">
+                            Stay up to date
+                        </button>
+                    </h2>
+                    <div id="collapseAbout3" class="accordion-collapse collapse" aria-labelledby="headingAbout" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <!-- <div class="about_hover"> -->
+                                <div class="container">
+                                    <div class="about_hover_main">
+                                        <div class="about_hover_title_desc">
+                                            <!-- <h2>About us</h2> -->
+                                            <p>Stay updated with the latest from IFFSIE – discover our work, the challenges we tackle, and our groundbreaking research on empowering at-risk youth. </p>
+                                            <img class="about_hover_bottom_image" src="./assets/images/about_hover_bottom.png" alt="about_hover_bottom">
+                                        </div>
+                                        <div class="about_hover_links">
+                                            <h2>Updates </h2>
+                                            <div class="about_hover_sun_links">
+                                                <a href="#">Blog</a>
+                                                <a href="#">Newsletter</a>
+                                                <a href="#">Case Studies</a>
+                                            </div>
+                                            <img class="about_hover_links_bottom-img" src="./assets/images/about_hover_links_bottom-img.png" alt="about_hover_links_bottom-img">
+                                        </div>
+                                        <div class="about_hover_links">
+                                            <h2>Resources</h2>
+                                            <div class="about_hover_sun_links">
+                                                <a href="#">Reports</a>
+                                                <a href="#">Library</a>
+                                            </div>
+                                            <img class="about_hover_sun_bottom" src="./assets/images/about_hover_sun_bottom_img.png" alt="about_hover_sun_bottom_img">
+                                        </div>
+                                        <div class="about_hover_image">
+                                            <div>
+                                                <img src="./assets/images/about_hover-image3.jpg" alt="about_hover">
+                                                <a href="#">Read our ground breaking report on mental health and   livelihoods in Somalia</a>
+                                            </div>
+                                            
+                                            <img class="about_hover-image_link" src="./assets/images/about_hover-image_link.png" alt="about_hover-image_link">
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <a href="#" class="nav-link d__none_992" id="about__hover">About</a> -->
+            <a href="#" class="nav-link d__none_992" id="news__hover">News & Resources</a>
+        </div>
+        <!-- <a href="#" class="nav-link" id="news__hover">News & Resources</a> -->
+        <div class="nav-btn responsive-btn">
+          <a class="sign-in-btn" href="#">Sign In</a>
+          <a class="donate-btn" href="#">Donate</a>
+        </div>
+      </div>
+      <div class="nav-btn desk-btn">
+        <a class="sign-in-btn" href="#">Sign In</a>
+        <a class="donate-btn" href="#">Donate</a>
+      </div>
+
+      <i class="fa fa-bars" id="nav-toggler"></i>
+    </navbar>
+  </div>
+</section> 
+
+<section class="hero-section">
+  <div class="container">
+    <div class="main-banner">
+      <div class="moing-main">
+        <div class="d-flex flex-column align-items-start">
+          <img src="assets/images/iffsie-hero.png" alt="iffsie-logo">
+         <h2 class=" hero-heading pt-2">We are moving young people from the side lines to the forefront in building peaceful and prosperous societies 
+        </h2>
+      </div>
+      <div>
+        <h2 class="hero-heading_2">Donate Now</h2>
+        <p class="generosity-p">Your generosity allows us to give meaningful employment, nurture well-being, and build a network of support for youth to lead a purposeful life.</p>
+      </div>
+      <div>
+        <div class="header_video_poster">
+            <a target="_blank" href="https://www.youtube.com/watch?v=tn2LanKJcOs"><video width="200px" src="https://ahmad-web-developer.b-cdn.net/video_poster.mp4" muted autoplay loop playsinline></video>
+            <div class="sound__btn" onclick="toggleSound()">
+                <i class="fa-solid fa-play "></i>
+            </div></a>
+        </div>
+      </div>
+      </div>
+      
+      <!-- <a target="_blank" href="https://www.youtube.com/watch?v=tn2LanKJcOs"><video width="200px" src="./assets/images/video_poster.mp4" muted autoplay loop playsinline></video></a> -->
+      <!-- <video width="200px" src="https://ahmad-web-developer.b-cdn.net/video_poster.mp4" muted autoplay loop playsinline></video> -->
+      <form id="donationForm" class="donation-form">
+        <header>
+            <h2>Choose amount</h2>
+        </header>
+        <div class="frm__padd">
+            <p class="form__para">Your gift can uplift a generation of youth.</p>
+            <div class="tab">
+                <button type="button" id="one-time-tab" class="active" onclick="toggleTab('one-time-tab')">One-Time</button>
+                <button type="button" id="monthly-tab" onclick="toggleTab('monthly-tab')">Monthly</button>
+            </div>
+            <div id="one-time-amounts" class="amount-buttons">
+                <input type="radio" id="one-time-amount-25" name="donation_amount" value="25">
+                <label for="one-time-amount-25">$ 25</label>
+                <input type="radio" id="one-time-amount-50" name="donation_amount" value="50">
+                <label for="one-time-amount-50">$ 50</label>
+                <input type="radio" id="one-time-amount-100" name="donation_amount" value="100">
+                <label for="one-time-amount-100">$ 100</label>
+                <input type="radio" id="one-time-amount-250" name="donation_amount" value="250">
+                <label for="one-time-amount-250">$ 250</label>
+                <input type="radio" id="one-time-amount-500" name="donation_amount" value="500">
+                <label for="one-time-amount-500">$ 500</label>
+                <input type="radio" id="one-time-amount-1000" name="donation_amount" value="1000">
+                <label for="one-time-amount-1000">$ 100</label>
+            </div>
+            
+            <div id="monthly_amounts" class="amount-buttons" style="display: none;">
+                <input type="radio" id="monthly_amount-20" name="donation_amount" value="20">
+                <label for="monthly_amount-20">$ 20</label>
+                <input type="radio" id="monthly_amount-40" name="donation_amount" value="40">
+                <label for="monthly_amount-40">$ 40</label>
+                <input type="radio" id="monthly_amount-80" name="donation_amount" value="80">
+                <label for="monthly_amount-80">$ 80</label>
+                <input type="radio" id="monthly_amount-160" name="donation_amount" value="160">
+                <label for="monthly_amount-160">$ 160</label>
+                <input type="radio" id="monthly_amount-320" name="donation_amount" value="320">
+                <label for="monthly_amount-320">$ 320</label>
+                <input type="radio" id="monthly_amount-640" name="donation_amount" value="640">
+                <label for="monthly_amount-640">$ 640</label>
+            </div>
+            
+            <div class="custom-amount position-relative">
+                <input type="text" name="custom_amount" placeholder="$ Custom Amount">
+            </div>
+            <div class="options position-relative">
+                <label><input type="checkbox" name="comment"> Dedicate my donation in honor or in memory of someone</label>
+                <label><input type="checkbox" name="comment"> Write us a comment</label>
+            </div>
+            <div class="next-button">
+                <button class="hov__button" type="submit">Next <img src="./assets/images/icons/right-arrow.svg" alt="right-arrow"></button>
+            </div>
+        </div>
+        
+    </form>
+    
+    </div>
+    
+  
+  </div>
+</section>
+
+<section class="empower_transform_sec">
+    <div class="container">
+        <div class="empower_transform_main">
+            <div class="empower_transform_content">
+                <h2>EMPOWER, UNITE <span>& </span>TRANSORM </h2>
+                <p class="mt-4">The Iftiin Foundation for Social Innovation & Entrepreneurship (IFFSIE), a Somalia-founded non-profit, empowers young people in violence-affected communities to become leaders in building peaceful, prosperous societies.</p>
+                <p class="mt-3">We operate across three mission areas to achieve greater impact: Economic Freedom, Mental Health, and Systems Change.</p>
+                <button class="hov__button" type="button">More About Us</button>
+            </div>
+            <div class="empower_transform_circle">
+                <a href="#mental__health" class="circle circle1">
+                    <div class="sub_circle">Mental Health</div>
+                </a>
+                <!-- <div class="pos__unt_992"> -->
+                    <a href="#systems__change" class="circle circle2">
+                        <div class="sub_circle">Systems Change</div>
+                    </a>
+                    <a href="#economic__freedom" class="circle circle3">
+                        <div class="sub_circle">Economic Freedom</div>
+                    </a>
+                <!-- </div> -->
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section id="impact_up_date_sec" class="impact_up_date_sec">
+    <div class="container">
+        <div class="impact_up_date_main">
+            <h2>IFFSIE’s impact up to date</h2>
+            <div class="impact_up_date_counter">
+                <div>
+                    <h3 data-target="2300" id="count1">0,000</h3>
+                    <p>decent jobs created for youth</p>
+                </div>
+                <div>
+                    <h3 data-target="1500" id="count2">0,000</h3>
+                    <p>decent jobs created for youth</p>
+                </div>
+                <div class="mx__285">
+                    <h3 data-target="50" id="count3">00</h3>
+                    <p>trained and certified mental health professionals</p>
+                </div>
+                <div>
+                    <h3 data-target="300000" id="count4">000,000</h3>
+                    <p>individuals reached through our programs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="economic_freedom_sec" id="economic__freedom">
+    <div class="container">
+        <div class="economic_freedom_main">
+            <div class="economic_freedom_image"><img src="./assets/images/economic_freedom.gif" alt="economic_freedom"></div>
+            <div class="economic_freedom_content">
+                <h2>Economic Freedom at <span>IFFSIE</span></h2>
+                <p>We ignite economic potential in youth with skills that meet market needs, services that empower, and connections that open doors to decent employment and entrepreneurship:</p>
+                <div class="mt-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="./assets/images/icons/kid_star.svg" alt="kid_star">
+                        <p class="rating_str_des">Market-driven skills training</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mt-2">
+                        <img src="./assets/images/icons/kid_star.svg" alt="kid_star">
+                        <p>Empowering support services</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mt-2">
+                        <img src="./assets/images/icons/kid_star.svg" alt="kid_star">
+                        <p>Networking for employment and entrepreneurship opportunities</p>
+                    </div>
+                    <button class="economic_freedom__btn hov__button" type="button">Learn more about Economic Freedom</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="workforce_development_sec">
+<div class="workforce_development_main">
+    <!-- <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <div class="container">
+            <h2 class="accordion-header" id="headingOne1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+                    <h2 class="accordion-title">Workforce Development</h2>
+                    <p class="accordion-title">Objectives</p>
+                    <p class="accordion-title">Target Group</p>
+                </button>
+            </h2>
+            <div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne1" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="d-flex flex-column trans_txt">
+                        <h3 class="accordion-title-body">Workforce Development</h3>
+                        <p>Our program is designed to equip youth with essential skills and create pathways to employment through on the job training, apprenticeships, and support services.</p>
+                        <a href="#" class="learn__more_btn hov__button mt-3" type="button">Learn More</a>
+                    </div>
+                    
+                    <div class="accordion__lable">
+                        <div class="accordion__sub__lable">
+                            <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                            <div>
+                                <h2>Objectives:</h2>
+                                <p>Bridge the gap between education and employment for youth.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__sub__lable mt-4">
+                            <img src="./assets/images/icons/target.svg" alt="target">
+                            <div>
+                                <h2>Target Group:</h2>
+                                <p>Youth aged 17 to 35</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__image">
+                        <img src="./assets/images/accordion__image.jpg" alt="accordion__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <div class="accordion-item">
+            <div class="container">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h2 class="accordion-title">Skills Building	</h2>
+                    <p class="accordion-title">Objectives</p>
+                    <p class="accordion-title">Target Group</p>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="d-flex flex-column trans_txt">
+                        <h3 class="accordion-title-body">Skills Building</h3>
+                        <p>Our program is designed to equip youth with essential skills and create pathways to employment through on the job training, apprenticeships, and support services.</p>
+                        <a href="#" class="learn__more_btn hov__button mt-3" type="button">Learn More</a>
+                    </div>
+                    
+                    <div class="accordion__lable">
+                        <div class="accordion__sub__lable">
+                            <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                            <div>
+                                <h2>Objectives:</h2>
+                                <p>Bridge the gap between education and employment for youth.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__sub__lable mt-4">
+                            <img src="./assets/images/icons/target.svg" alt="target">
+                            <div>
+                                <h2>Target Group:</h2>
+                                <p>Youth aged 17 to 35</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__image">
+                        <img src="./assets/images/accordion__image2.jpg" alt="accordion__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="accordion-item">
+            <div class="container">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <h2 class="accordion-title">Entrepreneurship</h2>
+                    <p class="accordion-title">Objectives</p>
+                    <p class="accordion-title">Target Group</p>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="d-flex flex-column trans_txt">
+                        <h3 class="accordion-title-body">Entrepreneurship</h3>
+                        <p>Our program is designed to equip youth with essential skills and create pathways to employment through on the job training, apprenticeships, and support services.</p>
+                        <a href="#" class="learn__more_btn hov__button mt-3" type="button">Learn More</a>
+                    </div>
+                    
+                    <div class="accordion__lable">
+                        <div class="accordion__sub__lable">
+                            <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                            <div>
+                                <h2>Objectives:</h2>
+                                <p>Bridge the gap between education and employment for youth.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__sub__lable mt-4">
+                            <img src="./assets/images/icons/target.svg" alt="target">
+                            <div>
+                                <h2>Target Group:</h2>
+                                <p>Youth aged 17 to 35</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__image">
+                        <img src="./assets/images/accordion__image2.jpg" alt="accordion__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div> -->
+    <div class="custom-accordion" id="customAccordion">
+        <div class="custom-accordion-item">
+            <div class="custom-accordion-header" id="headingOne">
+                <button class="custom-accordion-button container" aria-expanded="false" aria-controls="collapseOne">
+                    <div class="custom__align">
+                        <h2 class="custom-accordion-title accordion-title-body">Workforce Development</h2>
+                    <p class="custom-accordion-subtitle accordion-title">Objectives</p>
+                    </div>
+                    
+                    <p class="custom-accordion-subtitle">Target Group</p>
+                </button>
+            </div>
+            <div id="collapseOne" class="custom-accordion-collapse">
+                <div class="custom-accordion-body container">
+                    <div class="trans_txt">
+                        <p>Our program is designed to equip youth with essential skills and create pathways to employment through on the job training, apprenticeships, and support services.</p>
+                        <a href="#" class="learn__more_btn hov__button mt-3">Learn More</a>
+                    </div>
+                    
+                    
+                    <div class="custom-accordion-label">
+                        <div class="custom-accordion-sub-label">
+                            <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                            <div>
+                                <h2>Objectives:</h2>
+                                <p>Bridge the gap between education and employment for youth.</p>
+                            </div>
+                        </div>
+                        <div class="custom-accordion-sub-label mt-4">
+                            <img src="./assets/images/icons/target.svg" alt="target">
+                            <div>
+                                <h2>Target Group:</h2>
+                                <p>Youth aged 17 to 35</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-accordion-image">
+                        <img src="./assets/images/accordion__image.jpg" alt="accordion__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-accordion-item">
+            <div class="custom-accordion-header" id="headingOne">
+                <button class="custom-accordion-button container" aria-expanded="false" aria-controls="collapseOne">
+                    <div class="custom__align">
+                        <h2 class="custom-accordion-title accordion-title-body">Skills Building	</h2>
+                    <p class="custom-accordion-subtitle accordion-title">Objectives</p>
+                    </div>
+                    
+                    <p class="custom-accordion-subtitle">Target Group</p>
+                </button>
+            </div>
+            <div id="collapseOne" class="custom-accordion-collapse">
+                <div class="custom-accordion-body container">
+                    <div class="trans_txt">
+                        <p>Our program is designed to equip youth with essential skills and create pathways to employment through on the job training, apprenticeships, and support services. </p>
+                        <a href="#" class="learn__more_btn hov__button mt-3">Learn More</a>
+                    </div>
+                    
+                    
+                    <div class="custom-accordion-label">
+                        <div class="custom-accordion-sub-label">
+                            <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                            <div>
+                                <h2>Objectives:</h2>
+                                <p>Bridge the gap between education and employment for youth.</p>
+                            </div>
+                        </div>
+                        <div class="custom-accordion-sub-label mt-4">
+                            <img src="./assets/images/icons/target.svg" alt="target">
+                            <div>
+                                <h2>Target Group:</h2>
+                                <p>Youth aged 17 to 35</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-accordion-image">
+                        <img src="./assets/images/accordion__image2.jpg" alt="accordion__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-accordion-item">
+            <div class="custom-accordion-header" id="headingOne">
+                <button class="custom-accordion-button container" aria-expanded="false" aria-controls="collapseOne">
+                    <div class="custom__align">
+                        <h2 class="custom-accordion-title accordion-title-body">Entrepreneurship</h2>
+                    <p class="custom-accordion-subtitle accordion-title">Objectives</p>
+                    </div>
+                    
+                    <p class="custom-accordion-subtitle">Target Group</p>
+                </button>
+            </div>
+            <div id="collapseOne" class="custom-accordion-collapse">
+                <div class="custom-accordion-body container">
+                    <div class="trans_txt">
+                        <p>Our program is designed to equip youth with essential skills and create pathways to employment through on the job training, apprenticeships, and support services. </p>
+                        <a href="#" class="learn__more_btn hov__button mt-3">Learn More</a>
+                    </div>
+                    
+                    
+                    <div class="custom-accordion-label">
+                        <div class="custom-accordion-sub-label">
+                            <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                            <div>
+                                <h2>Objectives:</h2>
+                                <p>Bridge the gap between education and employment for youth.</p>
+                            </div>
+                        </div>
+                        <div class="custom-accordion-sub-label mt-4">
+                            <img src="./assets/images/icons/target.svg" alt="target">
+                            <div>
+                                <h2>Target Group:</h2>
+                                <p>Youth aged 17 to 35</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-accordion-image">
+                        <img src="./assets/images/accordion__image2.jpg" alt="accordion__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+</section>
+<section class="midst_conflict_sec">
+    <div class="container">
+        <div class="midst_conflict_main">
+            <h2>“In the midst of conflict, acknowledging that youth mental health is as vital as physical health is crucial of their success and well-being. Together, we can empower them to thrive.”</h2>
+        </div>
+    </div>
+</section>
+<section class="economic_freedom_sec" id="mental__health">
+    <div class="container">
+        <div class="economic_freedom_main">
+            <div class="economic_freedom_image"><img src="./assets/images/mental-health-gf.gif" alt="mental-health-gf"></div>
+            <div class="economic_freedom_content">
+                <h2 style="max-width: unset;">Mental Health at <span>IFFSIE</span></h2>
+                <p>We empower the next generation with resilience and support, ensuring they can face and overcome life’s hurdles:</p>
+                <div class="mt-4">
+                    <div class="d-flex align-items-center gap-2 mt-2">
+                        <img src="./assets/images/icons/kid_star.svg" alt="kid_star">
+                        <p>Training and certification programs</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="./assets/images/icons/kid_star.svg" alt="kid_star">
+                        <p class="rating_str_des">Direct mental health support services</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="./assets/images/icons/kid_star.svg" alt="kid_star">
+                        <p>School and community mental health education and advocacy</p>
+                    </div>
+                    <button class="economic_freedom__btn hov__button" type="button">Learn more about Mental Health</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="workforce_development_sec">
+    <div class="workforce_development_main">
+       
+        <div class="custom-accordion" id="customAccordion">
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" id="headingOne">
+                    <button class="custom-accordion-button container" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="custom__align">
+                            <h2 class="custom-accordion-title accordion-title-body">Mental Health Counseling</h2>
+                        <p class="custom-accordion-subtitle accordion-title">Objectives</p>
+                        </div>
+                        
+                        <p class="custom-accordion-subtitle">Target Group</p>
+                    </button>
+                </div>
+                <div id="collapseOne" class="custom-accordion-collapse">
+                    <div class="custom-accordion-body container">
+                        <div class="trans_txt">
+                            <p>Advocacy for policy change through lobbying, awareness campaigns, and partnerships with community leaders and policymakers</p>
+                            <a href="#" class="learn__more_btn hov__button mt-3">Learn More</a>
+                        </div>
+                        
+                        
+                        <div class="custom-accordion-label">
+                            <div class="custom-accordion-sub-label">
+                                <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                                <div>
+                                    <h2>Objectives:</h2>
+                                    <p>Bridge the gap between education and employment for youth.</p>
+                                </div>
+                            </div>
+                            <div class="custom-accordion-sub-label mt-4">
+                                <img src="./assets/images/icons/target.svg" alt="target">
+                                <div>
+                                    <h2>Target Group:</h2>
+                                    <p>Youth aged 17 to 35</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-accordion-image">
+                            <img src="./assets/images/accordion__image.jpg" alt="accordion__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" id="headingOne">
+                    <button class="custom-accordion-button container" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="custom__align">
+                            <h2 class="custom-accordion-title accordion-title-body">Training and Certification</h2>
+                        <p class="custom-accordion-subtitle accordion-title">Objectives</p>
+                        </div>
+                        
+                        <p class="custom-accordion-subtitle">Target Group</p>
+                    </button>
+                </div>
+                <div id="collapseOne" class="custom-accordion-collapse">
+                    <div class="custom-accordion-body container">
+                        <div class="trans_txt">
+                            <p>Our program is designed to equip youth with essential skills and create pathways to employment through on the job training, apprenticeships, and support services.  </p>
+                            <a href="#" class="learn__more_btn hov__button mt-3">Learn More</a>
+                        </div>
+                        
+                        
+                        <div class="custom-accordion-label">
+                            <div class="custom-accordion-sub-label">
+                                <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                                <div>
+                                    <h2>Objectives:</h2>
+                                    <p>Bridge the gap between education and employment for youth.</p>
+                                </div>
+                            </div>
+                            <div class="custom-accordion-sub-label mt-4">
+                                <img src="./assets/images/icons/target.svg" alt="target">
+                                <div>
+                                    <h2>Target Group:</h2>
+                                    <p>Youth aged 17 to 35</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-accordion-image">
+                            <img src="./assets/images/accordion__image2.jpg" alt="accordion__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" id="headingOne">
+                    <button class="custom-accordion-button container" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="custom__align">
+                            <h2 class="custom-accordion-title accordion-title-body">School Mental Health Education</h2>
+                        <p class="custom-accordion-subtitle accordion-title">Objectives</p>
+                        </div>
+                        
+                        <p class="custom-accordion-subtitle">Target Group</p>
+                    </button>
+                </div>
+                <div id="collapseOne" class="custom-accordion-collapse">
+                    <div class="custom-accordion-body container">
+                        <div class="trans_txt">
+                            <p>Our program is designed to equip youth with essential skills and create pathways to employment through on the job training, apprenticeships, and support services.  </p>
+                            <a href="#" class="learn__more_btn hov__button mt-3">Learn More</a>
+                        </div>
+                        
+                        
+                        <div class="custom-accordion-label">
+                            <div class="custom-accordion-sub-label">
+                                <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                                <div>
+                                    <h2>Objectives:</h2>
+                                    <p>Bridge the gap between education and employment for youth.</p>
+                                </div>
+                            </div>
+                            <div class="custom-accordion-sub-label mt-4">
+                                <img src="./assets/images/icons/target.svg" alt="target">
+                                <div>
+                                    <h2>Target Group:</h2>
+                                    <p>Youth aged 17 to 35</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-accordion-image">
+                            <img src="./assets/images/accordion__image2.jpg" alt="accordion__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<section class="youth_empowerment_sec">
+    <div class="container">
+        <div class="youth_empowerment_main">
+            <p>The fight for youth empowerment won’t be won by youth alone. It takes a community, a global effort, and unwavering support to ensure that every young person has the opportunity to thrive. Join us in this mission and be a part of the change.</p>
+        </div>
+        <button class="donate_btn hov__button" type="button">Donate Monthly</button>
+    </div>
+</section>
+<section class="economic_freedom_sec" id="systems__change">
+    <div class="container">
+        <div class="economic_freedom_main">
+            <div class="economic_freedom_image"><img src="./assets/images/systems-change-gf.gif" alt="systems-change-gf"></div>
+            <div class="economic_freedom_content">
+                <h2>Systems Change at <br><span>IFFSIE</span></h2>
+                <p>We make structures more adaptive, inclusive, and attuned to the true needs of young people, supporting their empowerment:</p>
+                <div class="mt-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="./assets/images/icons/kid_star.svg" alt="kid_star">
+                        <p class="rating_str_des">Advocacy for policy change</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mt-2">
+                        <img src="./assets/images/icons/kid_star.svg" alt="kid_star">
+                        <p>Conducting impactful and relevant research</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mt-2">
+                        <img src="./assets/images/icons/kid_star.svg" alt="kid_star">
+                        <p>Strengthening ecosystems that empower youth</p>
+                    </div>
+                   
+                    <button class="economic_freedom__btn hov__button" type="button">Learn more about Systems Change</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="workforce_development_sec">
+    <div class="workforce_development_main">
+      
+        <div class="custom-accordion" id="customAccordion">
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" id="headingOne">
+                    <button class="custom-accordion-button container" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="custom__align">
+                            <h2 class="custom-accordion-title accordion-title-body">Advocacy</h2>
+                        <p class="custom-accordion-subtitle accordion-title">Objectives</p>
+                        </div>
+                        
+                        <p class="custom-accordion-subtitle">Target Group</p>
+                    </button>
+                </div>
+                <div id="collapseOne" class="custom-accordion-collapse">
+                    <div class="custom-accordion-body container">
+                        <div class="trans_txt">
+                            <p>Advocacy for policy change through lobbying, awareness campaigns, and partnerships with community leaders and policymakers</p>
+                            <a href="#" class="learn__more_btn hov__button mt-3">Learn More</a>
+                        </div>
+                        
+                        
+                        <div class="custom-accordion-label">
+                            <div class="custom-accordion-sub-label">
+                                <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                                <div>
+                                    <h2>Objectives:</h2>
+                                    <p>Bridge the gap between education and employment for youth.</p>
+                                </div>
+                            </div>
+                            <div class="custom-accordion-sub-label mt-4">
+                                <img src="./assets/images/icons/target.svg" alt="target">
+                                <div>
+                                    <h2>Target Group:</h2>
+                                    <p>Youth aged 17 to 35</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-accordion-image">
+                            <img src="./assets/images/accordion__image.jpg" alt="accordion__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" id="headingOne">
+                    <button class="custom-accordion-button container" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="custom__align">
+                            <h2 class="custom-accordion-title accordion-title-body">Ecosystem Strengthening	</h2>
+                        <p class="custom-accordion-subtitle accordion-title">Objectives</p>
+                        </div>
+                        
+                        <p class="custom-accordion-subtitle">Target Group</p>
+                    </button>
+                </div>
+                <div id="collapseOne" class="custom-accordion-collapse">
+                    <div class="custom-accordion-body container">
+                        <div class="trans_txt">
+                            <p>Our program is designed to equip youth with essential skills and create pathways to employment through on the job training, apprenticeships, and support services.  </p>
+                            <a href="#" class="learn__more_btn hov__button mt-3">Learn More</a>
+                        </div>
+                        
+                        
+                        <div class="custom-accordion-label">
+                            <div class="custom-accordion-sub-label">
+                                <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                                <div>
+                                    <h2>Objectives:</h2>
+                                    <p>Bridge the gap between education and employment for youth.</p>
+                                </div>
+                            </div>
+                            <div class="custom-accordion-sub-label mt-4">
+                                <img src="./assets/images/icons/target.svg" alt="target">
+                                <div>
+                                    <h2>Target Group:</h2>
+                                    <p>Youth aged 17 to 35</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-accordion-image">
+                            <img src="./assets/images/accordion__image2.jpg" alt="accordion__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" id="headingOne">
+                    <button class="custom-accordion-button container" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="custom__align">
+                            <h2 class="custom-accordion-title accordion-title-body">Research and Insights</h2>
+                        <p class="custom-accordion-subtitle accordion-title">Objectives</p>
+                        </div>
+                        
+                        <p class="custom-accordion-subtitle">Target Group</p>
+                    </button>
+                </div>
+                <div id="collapseOne" class="custom-accordion-collapse">
+                    <div class="custom-accordion-body container">
+                        <div class="trans_txt">
+                            <p>Our program is designed to equip youth with essential skills and create pathways to employment through on the job training, apprenticeships, and support services.  </p>
+                            <a href="#" class="learn__more_btn hov__button mt-3">Learn More</a>
+                        </div>
+                        
+                        
+                        <div class="custom-accordion-label">
+                            <div class="custom-accordion-sub-label">
+                                <img src="./assets/images/icons/objectives.svg" alt="objectives">
+                                <div>
+                                    <h2>Objectives:</h2>
+                                    <p>Bridge the gap between education and employment for youth.</p>
+                                </div>
+                            </div>
+                            <div class="custom-accordion-sub-label mt-4">
+                                <img src="./assets/images/icons/target.svg" alt="target">
+                                <div>
+                                    <h2>Target Group:</h2>
+                                    <p>Youth aged 17 to 35</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-accordion-image">
+                            <img src="./assets/images/accordion__image2.jpg" alt="accordion__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<section class="latest_news_updates_sec pb-0">
+    <div class="container position-relative">
+        <div class="latest_news_updates_main">
+            <h2>Latest News <span>&</span> Updates</h2>
+        </div>
+        
+        <div class="swiper latest__news_slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="latest_news_updates_card">
+                    <h2>PRESS RELEASES</h2>
+                    <p>The Child Mind Institute Unveils the Center of Excellence in Child and Adolescent Mental Health, New Headquarters in New York City</p>
+                    <h2 class="mt-3">June 5, 2024</h2>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="latest_news_updates_card">
+                    <h2>PRESS RELEASES</h2>
+                    <p>The Child Mind Institute Unveils the Center of Excellence in Child and Adolescent Mental Health, New Headquarters in New York City</p>
+                    <h2 class="mt-3">June 5, 2024</h2>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="latest_news_updates_card">
+                    <h2>PRESS RELEASES</h2>
+                    <p>The Child Mind Institute Unveils the Center of Excellence in Child and Adolescent Mental Health, New Headquarters in New York City</p>
+                    <h2 class="mt-3">June 5, 2024</h2>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="latest_news_updates_card">
+                    <h2>PRESS RELEASES</h2>
+                    <p>The Child Mind Institute Unveils the Center of Excellence in Child and Adolescent Mental Health, New Headquarters in New York City</p>
+                    <h2 class="mt-3">June 5, 2024</h2>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="latest__news__slides_btn">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</section>
+<section class="subscribe_newsletters_sec">
+    <div class="container">
+        <div class="subscribe_newsletters_main">
+            <div class="subscribe_newsletters_mail">
+                <h2><span>Subscribe</span> to Our Newsletters</h2>
+                <div class="position-relative w_70_550">
+                    <input type="email" id="email" placeholder="Enter Email" >
+                    <button class="subscribe__btn hov__button" type="button">Subscribe</button>
+                </div>
+                <p class="mt-4">This site is protected by reCAPTCHA and the Google</p>
+                <p class="mt-2"><a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footer_sec">
+    <div class="container">
+        <div class="footer__main">
+            <div class="footer_logo">
+                <a href="#"><img class="footer_logo__img" src="./assets/images/icons/footer_logo.svg" alt="footer_logo"></a>
+                <h2>FOLLOW US ON SOCIAL</h2>
+                <div class="footer_social_icons">
+                    <div class="social_icons_bx">
+                        <a href="#"><img src="./assets/images/icons/social_facebook.svg" alt="social_facebook"></a>
+                    </div>
+                    <div class="social_icons_bx">
+                        <a href="#"><img src="./assets/images/icons/footer_twitter.svg" alt="footer_twitter"></a>
+                    </div>
+                    <div class="social_icons_bx">
+                        <a href="#"><img src="./assets/images/icons/footer_instagram.svg" alt="footer_instagram"></a>
+                    </div>
+                    <div class="social_icons_bx">
+                        <a href="#"><img src="./assets/images/icons/footer_linkdin.svg" alt="footer_linkdin"></a>
+                    </div>
+                    <div class="social_icons_bx">
+                        <a href="#"><img src="./assets/images/icons/footer_youtube.svg" alt="footer_youtube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_links">
+                <div>
+                    <h2>Program</h2>
+                    <div class="d-flex flex-column gp__10">
+                        <a href="#">Mental Health</a>
+                        <a href="#">Wellbeing</a>
+                        <a href="#">Economic Freedom</a>
+                    </div>
+                </div>
+                <div>
+                    <h2>About Us</h2>
+                    <div class="d-flex flex-column gp__10">
+                        <a href="#">Who we are</a>
+                        <a href="#">Team</a>
+                        <a href="#">Partnerships</a>
+                        <a href="#">Donate</a>
+                        <a href="#">Shop</a>
+                    </div>
+                </div>
+                <div>
+                    <h2>New & Resourses</h2>
+                    <div class="d-flex flex-column gp__10">
+                        <a href="#">Blog</a>
+                        <a href="#">Newsletter</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Reports</a>
+                        <a href="#">Library</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_partners">
+                <h2>Our Partners & Sponsors</h2>
+                <div class="footer_partner_logos">
+                    <img width="112" src="./assets/images/icons/partner-1.png" alt="partner-1">
+                    <img width="89" src="./assets/images/icons/partner-2.png" alt="partner-2">
+                    <img width="115" src="./assets/images/icons/partner-3.png" alt="partner-3">
+                    <img width="100" src="./assets/images/icons/partner-4.png" alt="partner-4">
+                    <img width="101" src="./assets/images/icons/partner-5.png" alt="partner-5">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<section class="footer_bar">
+    <div class="container">
+        <div class="footer_bar_main">
+            <div class="">
+                <a href="#">Term & Conditions</a>
+                <span></span>
+                <a href="#">Privacy Policy</a>
+                <span></span>
+                <a href="#">Hiring</a>
+            </div>
+            <div>
+                <p>@2024 All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<div class="top-progress-bar"></div>
+<div class="paginacontainer">
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <!-- Remove the <defs> and <linearGradient> section -->
+        <path class="progress-path" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" stroke="#ff8206" stroke-width="4" fill="#E54E1A"/>
+      </svg>
+  </div>
+</div>
+<!-- ************************Scripts Start Here*********************************-->
+
+<!--------------------------------- Jquery --------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-------------------------------- Jquery Ends------------------------------->
+
+<!--------------------------------- Popper Js ------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!--------------------------------- Popper Js Ends----------------------------->
+
+<!--------------------------------- Bootstrap 5 cdn ---------------------------->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!------------------------------------ Bootstrap 5 cdn Ends--------------------->
+
+<!------------------------------- Custom Js ---------------------------------->
+<script src="assets/js/script.js"></script>
+<!------------------------------ Custom Js Ends --------------------->
+<!-- jQuery -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<!-- jQuery Validation Plugin -->
+<!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script> -->
+<!-- ******************************Scripts End Here******************************-->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#nav-toggler').on('click', function(){
+        $(this).toggleClass('fa-times');
+        $('.main-nav .nav-items').toggleClass('show');
+    });
+
+    $(window).on('scroll load',function(){
+
+        if($(window).scrollTop() > 0){
+        $('.main-nav').addClass('bgchange');
+        }else{
+          $('.main-nav').removeClass('bgchange');
+        }
+
+
+    });
+
+  });
+</script>
+<script>
+    function toggleTab(tab) {
+            document.getElementById('one-time-tab').classList.remove('active');
+            document.getElementById('monthly-tab').classList.remove('active');
+            document.getElementById(tab).classList.add('active');
+            if (tab === 'one-time-tab') {
+                showOneTimeAmounts();
+            } else {
+                showMonthlyAmounts();
+            }
+        }
+
+        function showOneTimeAmounts() {
+            document.getElementById('one-time-amounts').style.display = 'flex';
+            document.getElementById('monthly_amounts').style.display = 'none';
+        }
+
+        function showMonthlyAmounts() {
+            document.getElementById('one-time-amounts').style.display = 'none';
+            document.getElementById('monthly_amounts').style.display = 'flex';
+        }
+</script>
+<script>
+
+
+    // jQuery validation script
+    $(document).ready(function () {
+        $.validator.addMethod("atLeastOneRadioChecked", function(value, element) {
+        return $("input[name='" + $(element).attr("name") + "']:checked").length > 0;
+    }, "Please select an option");
+
+        $("#donationForm").validate({
+            rules: {
+                "donation_amount": {
+                    atLeastOneRadioChecked: true
+                },
+                "monthly_amount": {
+                    required: function(element) {
+                        return $("input[name='monthly_amount']:checked").length === 0;
+                    }
+                },
+                "custom_amount": {
+                    required: true,
+                    digits: true // Example: Require custom amount to be numeric
+                },
+                "dedicate": {
+                    required: true // Example: Require at least one checkbox to be checked
+                },
+                "comment": {
+                    required: true // Example: Require at least one checkbox to be checked
+                }
+                // Add more rules as needed
+            },
+            messages: {
+                "donation_amount": {
+                    atLeastOneRadioChecked: "Please select a one-time donation amount"
+                },
+                "monthly_amount": {
+                    required: "Please select a monthly donation amount"
+                },
+                "custom_amount": {
+                    required: "Please enter a custom donation amount",
+                    digits: "Please enter a valid numeric amount"
+                },
+                "dedicate": {
+                    required: "Please select at least one option"
+                },
+                "comment": {
+                    required: "Please select at least one option"
+                }
+                // Add more messages as needed
+            },
+            errorElement: "div",
+            errorPlacement: function (error, element) {
+                error.addClass("error-message");
+                if (element.attr("name") === "dedicate" || element.attr("name") === "comment") {
+                    error.insertAfter(element.parent());
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            highlight: function (element, errorClass, validClass) {
+                $(element).addClass("is-invalid").removeClass("is-valid");
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).removeClass("is-invalid").addClass("is-valid");
+            },
+            submitHandler: function (form) {
+                Swal.fire({
+                    icon: "success",
+                    title: "Success!",
+                    text: "Your donation form has been submitted successfully!",
+                    showConfirmButton: false,
+                    timer: 4000 // Adjust the time here (in milliseconds)
+                }).then(function () {
+                    form.submit();
+                });
+            }
+        });
+    });
+
+</script>
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+    function counter(id, start, end, duration, formatFunc) {
+        let obj = document.getElementById(id),
+            current = start,
+            range = end - start,
+            increment = Math.ceil(range / (duration / 50)), // Calculate increment value
+            step = 50, // Set step interval to 50 milliseconds
+            timer = setInterval(() => {
+                current += increment;
+                if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+                    current = end;
+                    clearInterval(timer);
+                }
+                obj.textContent = formatFunc(current);
+            }, step);
+    }
+
+    // Formatting functions for each counter
+    function formatThousand(value) {
+        return value.toLocaleString('en-US', { minimumIntegerDigits: 4, useGrouping: true });
+    }
+
+    function formatDoubleZero(value) {
+        return value.toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+    }
+
+    function formatMillion(value) {
+        return value.toLocaleString('en-US');
+    }
+
+    // Intersection Observer to trigger the counters when the section is in view
+    function observeSection(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                counter("count1", 0, parseInt(document.getElementById("count1").getAttribute('data-target')), 5000, formatThousand);
+                counter("count2", 0, parseInt(document.getElementById("count2").getAttribute('data-target')), 5000, formatThousand);
+                counter("count3", 0, parseInt(document.getElementById("count3").getAttribute('data-target')), 5000, formatDoubleZero);
+                counter("count4", 0, parseInt(document.getElementById("count4").getAttribute('data-target').replace(/,/g, '')), 5000, formatMillion);
+                observer.unobserve(entry.target); // Stop observing after the counters start
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(observeSection, { threshold: 0.5 });
+    observer.observe(document.getElementById('impact_up_date_sec'));
+});
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var swiper = new Swiper(".latest__news_slider", {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+                delay: 3000, // Auto play interval in milliseconds
+                disableOnInteraction: false, // Enable/disable auto play on slide interaction (default is true)
+              },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+              // when window width is >= 768px
+              375: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        // when window width is >= 768px
+        350: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        500: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        // when window width is >= 1024px
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        1050: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        // when window width is >= 1440px
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 40
+        }
+      }
+    });
+});
+        </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hoverElements = [
+            { trigger: 'about__hover', content: 'about_hover' },
+            { trigger: 'program__hover', content: 'program__hover' },
+            { trigger: 'news__hover', content: 'news__hover' }
+        ];
+    
+        hoverElements.forEach(({ trigger, content }) => {
+            const triggerElement = document.getElementById(trigger);
+            const contentElement = document.querySelector(`.${content}`);
+    
+            function showHoverContent() {
+                contentElement.style.opacity = '1';
+                contentElement.style.visibility = 'visible';
+                const rect = triggerElement.getBoundingClientRect();
+                contentElement.style.top = `${rect.bottom}px`;
+                contentElement.style.left = `${rect.left}px`;
+            }
+    
+            function hideHoverContent() {
+                contentElement.style.opacity = '0';
+                contentElement.style.visibility = 'hidden';
+            }
+    
+            triggerElement.addEventListener('mouseenter', showHoverContent);
+            triggerElement.addEventListener('mouseleave', hideHoverContent);
+            contentElement.addEventListener('mouseenter', showHoverContent);
+            contentElement.addEventListener('mouseleave', hideHoverContent);
+        });
+    });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+  var accordions = document.querySelectorAll('.accordion-collapse');
+
+  accordions.forEach(function (accordion) {
+    accordion.addEventListener('shown.bs.collapse', function () {
+      var img = this.querySelector('.accordion__image img');
+      if (img) {
+        setTimeout(function() {
+          img.classList.add('animate');
+        }, 100); // 2000 milliseconds = 2 seconds
+      }
+    });
+
+    accordion.addEventListener('hidden.bs.collapse', function () {
+      var img = this.querySelector('.accordion__image img');
+      if (img) {
+        img.classList.remove('animate');
+        img.style.opacity = 0; // Reset opacity immediately
+        img.style.transform = 'translateY(0%)'; // Reset position immediately
+      }
+    });
+  });
+});
+
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionItems = document.querySelectorAll('.custom-accordion-item');
+
+    accordionItems.forEach(item => {
+        const button = item.querySelector('.custom-accordion-button');
+        const collapse = item.querySelector('.custom-accordion-collapse');
+        let isHovered = false;
+        let isExpanded = false;
+
+        // Initially hide the collapse
+        collapse.style.height = '0';
+        collapse.style.overflow = 'hidden';
+
+        // Click event to toggle accordion collapse visibility
+        button.addEventListener('click', function() {
+            isExpanded = !isExpanded;
+
+            // Toggle aria-expanded attribute
+            button.setAttribute('aria-expanded', isExpanded);
+
+            // Toggle collapse height
+            if (isExpanded) {
+                collapse.style.display = 'block';
+                const autoHeight = collapse.scrollHeight + 'px'; // Get the natural height of the element
+                collapse.style.height = autoHeight; // Set height to auto to expand
+            } else {
+                collapse.style.height = '0'; // Set height to 0 to collapse
+                setTimeout(() => {
+                    if (!isExpanded) collapse.style.display = 'none';
+                }, 3000); // Wait for the transition to complete before setting display to none
+            }
+        });
+
+        // Hover event to expand accordion collapse
+        item.addEventListener('mouseenter', function() {
+            isHovered = true;
+            if (!isExpanded) {
+                collapse.style.display = 'block';
+                collapse.style.height = '70px'; // Set the desired height on hover
+            }
+        });
+
+        item.addEventListener('mouseleave', function() {
+            isHovered = false;
+            if (!isExpanded) {
+                collapse.style.height = '0'; // Reset height to 0 when not hovered
+                setTimeout(() => {
+                    if (!isHovered) collapse.style.display = 'none';
+                }, 3000); // Wait for the transition to complete before setting display to none
+            }
+        });
+    });
+});
+
+    </script>
+    <script>
+        document.addEventListener('scroll', () => {
+  const topProgressBar = document.querySelector('.top-progress-bar');
+  const paginaContainer = document.querySelector('.paginacontainer');
+  const progressPath = document.querySelector('.progress-path');
+  const pathLength = progressPath.getTotalLength();
+  const scrollTop = document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollFraction = scrollTop / docHeight;
+  const drawLength = pathLength * scrollFraction;
+
+  // Show/hide top progress bar based on scroll position
+  topProgressBar.style.opacity = scrollTop > 0 ? 1 : 0;
+
+  // Show/hide circular progress bar based on scroll position
+  if (scrollTop > 0) {
+    paginaContainer.classList.add('active-progress');
+  } else {
+    paginaContainer.classList.remove('active-progress');
+  }
+
+  // Update circular progress indicator
+  progressPath.style.strokeDasharray = pathLength;
+  progressPath.style.strokeDashoffset = pathLength - drawLength;
+
+  // Update width of .top-progress-bar::after based on scroll position
+  topProgressBar.style.width = `${scrollFraction * 100}%`;
+});
+
+// Initial setup for circle
+document.addEventListener('DOMContentLoaded', () => {
+  const progressPath = document.querySelector('.progress-path');
+  const pathLength = progressPath.getTotalLength();
+
+  progressPath.style.strokeDasharray = pathLength;
+  progressPath.style.strokeDashoffset = pathLength;
+});
+
+// Function to handle click event on progress-wrap
+document.querySelector('.progress-wrap').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Smooth scroll to the top
+  });
+});
+
+    </script>
+
+</body>
+</html>
+    
