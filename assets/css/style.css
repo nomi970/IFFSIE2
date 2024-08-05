@@ -160,6 +160,7 @@ align-items: flex-start;
 }
 .moing-main img{
     width: 80%;
+    padding-bottom: 100px;
 }
 .hero-section .hero-heading{
     width: 100%;
@@ -176,7 +177,7 @@ align-items: flex-start;
     font-size: 35px;
     color: var(--Foundation-Background-Light, #FFFEFF);
     font-weight: 600;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 .hero-section .generosity-p{
     /* padding-top: 32px; */
@@ -298,12 +299,12 @@ padding-top: 20px;
     background-color: gray;
 }
 .circle3 {
-    border: 5px solid #0F36FF;
+    border: 5px solid #2196f3;
     top: -90px;
     left: 34px;
 }
 .circle3:hover{
-    background-color: #0F36FF;
+    background-color: #2196f3;
 }
 /* Hover effect: Scale up when hovered */
 .circle:hover {
@@ -617,7 +618,7 @@ padding-top: 20px;
     align-items: center;
     position: relative;
     min-height: 400px;
-    z-index: -1;
+    /* z-index: -1; */
 }
 .subscribe_newsletters_sec::after{
     background-image: url(../images/woman-pic2.png);
@@ -1484,7 +1485,7 @@ padding-top: 20px;
       }
       .header_video_poster{
         position: absolute;
-        top: 27px;
+        top: 145px;
         right: 170px;
       }
       .video__poster_width{
@@ -2031,7 +2032,7 @@ padding-top: 20px;
         width: 150px;
       }
       .header_video_poster {
-        top: 25px;
+        /* top: 25px; */
         left: 90px;
     }
     .custom-accordion-button::after{
@@ -2042,7 +2043,7 @@ padding-top: 20px;
 }
 @media screen and (max-width: 470px){
     .header_video_poster {
-        top: 23px;
+        /* top: 23px; */
         left: 68px;
     }
     .video__poster_width{
@@ -2084,8 +2085,12 @@ padding-top: 20px;
         padding-left: 30px;
     }
         .header_video_poster {
-            top: 20px;
-            left: 68px;
+            /* top: 20px; */
+            left: 100px;
+        }
+        .moing-main img{
+            padding-bottom: 85px;
+            margin: 0 auto;
         }
 }
 @media screen and (max-width: 350px){
@@ -2093,7 +2098,7 @@ padding-top: 20px;
         padding-left: 0px;
     }
       .header_video_poster {
-        top: 0px;
+        top: 120px;
         right: 15px;
     }
     .video__poster_width{
