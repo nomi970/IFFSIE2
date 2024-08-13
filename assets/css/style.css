@@ -291,12 +291,12 @@ padding-top: 20px;
     color: #464647;
 }
 .circle2 {
-    border: 5px solid gray;
+    border: 5px solid rgba(128, 128, 128, 0.534);
     top: 38px;
     left: 206px;
 }
 .circle2:hover{
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.534);
 }
 .circle3 {
     border: 5px solid #2196f3;
@@ -357,9 +357,23 @@ padding-top: 20px;
 .economic_freedom_sec{
     padding: 55px 0px;
 }
+.economic_freedom_image{
+    background-image: url(../images/animated_gf.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    height: 500px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
 .economic_freedom_image img{
     width: 100%;
-    max-width: 522px;
+    max-width: 390px;
+    height: 350px;
 }
 .economic_freedom_content{
     max-width: 673px;
@@ -1506,6 +1520,7 @@ padding-top: 20px;
         width: 100%;
         height: 130px;
         object-fit: cover;
+        border-radius: 12px;
       }
       .sec h2 {
         position: absolute;
@@ -1525,6 +1540,7 @@ padding-top: 20px;
         color: #fff;
         background: rgba(0, 0, 0, 0.95);
         mix-blend-mode: multiply;
+        border-radius: 12px;
       }
       .sec h2 {
         font-size: 137px;
