@@ -391,7 +391,7 @@ padding-top: 20px;
     line-height: 64.46px;
     text-align: left;
     color: #000000;
-    max-width: 439px;
+    /* max-width: 439px; */
 }
 .economic_freedom_content span{
     color: #FF8206;
