@@ -369,6 +369,8 @@ padding-top: 20px;
     /* flex-direction: column;
     text-align: center;
     align-items: center; */
+    max-width: 480px;
+    
 }
 .economic_freedom_image video{
     width: 490px;
@@ -379,7 +381,7 @@ padding-top: 20px;
     height: 350px;
 }
 .economic_freedom_content{
-    max-width: 600px !important;
+    /* max-width: 690px !important; */
     width: 100%;
 }
 .economic_freedom_content h2{
@@ -1564,7 +1566,7 @@ padding-top: 20px;
         margin-right: 0px !important;
     }
     .economic_freedom_content{
-        max-width: 500px;
+        /* max-width: 500px; */
     }
     .accordion__image img{
         width: 70%;
