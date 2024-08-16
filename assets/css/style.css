@@ -358,17 +358,20 @@ padding-top: 20px;
     padding: 55px 0px;
 }
 .economic_freedom_image{
-    background-image: url(../images/animated_gf.gif);
+    /* background-image: url(../images/animated_gf.gif); */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     width: 100%;
     display: flex;
     justify-content: end;
-    height: 500px;
-    flex-direction: column;
+    /* height: 500px; */
+    /* flex-direction: column;
     text-align: center;
-    align-items: center;
+    align-items: center; */
+}
+.economic_freedom_image video{
+    width: 490px;
 }
 .economic_freedom_image img{
     width: 100%;
@@ -376,7 +379,7 @@ padding-top: 20px;
     height: 350px;
 }
 .economic_freedom_content{
-    max-width: 673px;
+    max-width: 600px !important;
     width: 100%;
 }
 .economic_freedom_content h2{
@@ -1553,8 +1556,6 @@ padding-top: 20px;
 
 
 
-
-
 @media screen and (max-width: 1370px){
     .accordion-header .accordion-title{
         font-size: 20px !important;
@@ -2086,6 +2087,10 @@ padding-top: 20px;
         background-size: 100% 100%;
         width: 15px;
         height: 15px;
+    }
+    .economic_freedom_image video{
+        width: 100%;
+        margin: 0 auto;
     }
 }
 @media screen and (max-width: 470px){
