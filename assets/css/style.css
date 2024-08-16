@@ -2089,6 +2089,9 @@ padding-top: 20px;
         width: 100%;
         margin: 0 auto;
     }
+    .economic_freedom_image img {
+        height: 300px;
+    }
 }
 @media screen and (max-width: 470px){
     .header_video_poster {
